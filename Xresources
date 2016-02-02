@@ -1,3 +1,8 @@
+! color scheme
+URxvt*background:       [90]#131d24
+URxvt*foreground:       #eeeeee
+URxvt*cursorColor:      #eeeeee
+
 !Black
 URxvt*color0:           #4a4b4a
 URxvt*color8:           #696969
@@ -31,6 +36,9 @@ URxvt*color7:           #DBDCDC
 URxvt*color15:          #FDFDFD
 
 
+
+
+
 ! Settings
 URxvt*buffered:               true            ! double buffer for xtf
 URxvt*hold:                   false           ! kill window on shell exit
@@ -39,7 +47,7 @@ URxvt*print-pipe:             cat > $HOME/tmp/$(echo urxvt.dump.$(date +'%s'))
 URxvt*saveLines:              9999            ! non-tmux window scroll back
 ! Text
 URxvt*colorUL:                yellow
-URxvt*font:                   xft:Inconsolata:size=15
+URxvt*font:                   xft:Source Code Pro:size=12
 URxvt*internalBorder:         6               ! pixels from frame edge
 ! URxvt*letterSpace:            -1              ! xft adjustment (for vanilla urxvt)
 URxvt*lineSpace:              4               ! pixels between lines for added readability
@@ -56,11 +64,19 @@ URxvt*scrollTtyKeypress:      true            ! scroll to bottom on keypress
 URxvt*scrollTtyOutput:        false           ! do not scroll to bottom on output
 URxvt*scrollWithBuffer:       false           ! do not use scrollback buffer
 URxvt*skipScroll:             true            ! favour scroll speed over listing all lines
+
+! Enable copy paste via Control + Shift + V     :)
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.iso14755:                 False
+
+
 ! Enable left mouse click url launcher
 URxvt*matcher.button:         1
 URxvt*perl-ext:
-URxvt*perl-ext-common:        default,matcher
+URxvt*perl-ext-common:        default,matcher,clipboard
 URxvt*url-launcher:           luakit
+
+
 
 ! Act more like XTerm :-)
 URxvt*termName:               xterm-256color

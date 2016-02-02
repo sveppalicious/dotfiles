@@ -1,39 +1,42 @@
 ! color scheme
-URxvt*background:             [90]#131d24
-URxvt*foreground:             #eeeeee
-URxvt*cursorColor:            #eeeeee
+URxvt*background:       [90]#131d24
+URxvt*foreground:       #eeeeee
+URxvt*cursorColor:      #eeeeee
 
-!BLK
-URxvt.color0:     #303030
-URxvt.color8:     #686868
+!Black
+URxvt*color0:           #4a4b4a
+URxvt*color8:           #696969
 
-!RED
-URxvt.color9:     #FFA7DA
-URxvt.color1:     #D370A3
+!Red
+URxvt*color1:           #D7699A
+URxvt*color9:           #F5A2B5
 
-!GRN
-URxvt.color10:    #A3D572
-URxvt.color2:     #6D9E3F
+!Green
+URxvt*color2:           #80D468
+URxvt*color10:          #A3F2A0
 
-!BLU
-URxvt.color12:    #98CBFE
-URxvt.color4:     #6095C5
+!Yellow
+URxvt*color3:           #D7A169
+URxvt*color11:          #F5CDA2
 
-!YEL
-URxvt.color11:    #EFBD8B
-URxvt.color3:     #B58858
+!Blue
+URxvt*color4:           #6985D7
+URxvt*color12:          #A2C1F5
 
-!CYN
-URxvt.color14:    #75DAA9
-URxvt.color6:     #3BA275
+!Magenta
+URxvt*color5:           #C86AD4
+URxvt*color13:          #D2A2F5
 
-!MAG
-URxvt.color13:    #E5B0FF
-URxvt.color5:     #AC7BDE
+!Cyan
+URxvt*color6:           #6FCCD1
+URxvt*color14:          #A0E9F2
 
-!WHT
-URxvt.color7:     #CFCFCF
-URxvt.color15:    #FFFFFF
+!White
+URxvt*color7:           #DBDCDC
+URxvt*color15:          #FDFDFD
+
+
+
 
 
 ! Settings
@@ -44,8 +47,7 @@ URxvt*print-pipe:             cat > $HOME/tmp/$(echo urxvt.dump.$(date +'%s'))
 URxvt*saveLines:              9999            ! non-tmux window scroll back
 ! Text
 URxvt*colorUL:                yellow
-URxvt*font:                   xft:Source Code Pro
-! URxvt*font:                   xft:Inconsolata-dz:size=12
+URxvt*font:                   xft:Source Code Pro:size=12
 URxvt*internalBorder:         6               ! pixels from frame edge
 ! URxvt*letterSpace:            -1              ! xft adjustment (for vanilla urxvt)
 URxvt*lineSpace:              4               ! pixels between lines for added readability
@@ -62,14 +64,19 @@ URxvt*scrollTtyKeypress:      true            ! scroll to bottom on keypress
 URxvt*scrollTtyOutput:        false           ! do not scroll to bottom on output
 URxvt*scrollWithBuffer:       false           ! do not use scrollback buffer
 URxvt*skipScroll:             true            ! favour scroll speed over listing all lines
-! Paste
-URxvt*keysym.Shift-Control-V: perl:clipboard:paste
-URxvt*iso14755: False
+
+! Enable copy paste via Control + Shift + V     :)
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.iso14755:                 False
+
+
 ! Enable left mouse click url launcher
 URxvt*matcher.button:         1
 URxvt*perl-ext:
-URxvt*perl-ext-common:        default,,clipboard
+URxvt*perl-ext-common:        default,matcher,clipboard
 URxvt*url-launcher:           luakit
+
+
 
 ! Act more like XTerm :-)
 URxvt*termName:               xterm-256color
@@ -244,3 +251,5 @@ URxvt*keysym.S-M-C-Up:        \033[1;8A
 URxvt*keysym.S-M-C-Down:      \033[1;8B
 URxvt*keysym.S-M-C-Right:     \033[1;8C
 URxvt*keysym.S-M-C-Left:      \033[1;8D
+
+
