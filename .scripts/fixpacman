@@ -1,0 +1,30 @@
+#!/bin/bash
+
+source ~/.scripts/utils.sh
+
+function lockExists ()
+{
+    ls /var/lib/pacman/db.lck
+}
+
+function removeLock ()
+{
+    sudo rm /var/lib/pacman/db.lck
+}
+
+e_header "Fix Pacman"
+
+if lockExists; then
+    e_success "database lock exists"
+else
+    e_warning "database lock does not exist"
+    exit 1
+fi
+
+seek_confirmation "delete database lock?"
+if is_confirmed; then
+    removeLock
+    e_success "Pacman was fixed"
+else
+    e_warning "Exiting"
+fi

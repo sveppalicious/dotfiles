@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source $HOME/.scripts/utils.sh
+
+e_header "I am a sample script"
