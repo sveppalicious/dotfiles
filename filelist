@@ -1,0 +1,17 @@
+# common
+.zshrc
+.vimrc
+
+# X-related
+.xinitrc
+.Xresources
+
+# WM
+.config/bspwm/bspwmrc
+.config/sxhkd/sxhkdrc
+
+# Polybar
+.config/polybar/config
+.config/polybar/launch
+
+

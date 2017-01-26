@@ -1,0 +1,58 @@
+#! /bin/sh
+
+xrandr --output DVI-I-1 --auto --output VGA-1 --auto --left-of DVI-I-1 &
+xrandr --output DVI-I-1 --primary &
+sxhkd &
+
+bspc monitor DVI-I-1 -d surf term code read files watch ws_7 ws_8 ws_9
+bspc monitor VGA-1 -d surf term code read files watch ws_7 ws_8 ws_9
+
+bspc config border_width         5
+bspc config window_gap           10
+
+bspc config top_padding		35
+bspc config bottom_padding	10
+bspc config left_padding	0
+bspc config right_padding	0
+
+bspc config split_ratio          0.50
+bspc config focus_by_distance    true
+bspc config history_aware_focus  true
+bspc config click_to_focus	 	 true
+bspc config focus_follows_pointer	true
+
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config paddingless_monocle   false
+
+bspc config normal_border_color '#e8e8e8'
+bspc config focused_border_color '#0040ff'
+color_active_border="#e8e8e8"
+color_presel_feedback="#555555"
+
+# 1 surf desktop
+bspc rule -a chromium desktop=^1 focus=on state=tiled follow=on
+bspc rule -a Opera-developer desktop=^1 focus=on state=tiled follow=on
+bspc rule -a Firefox desktop=^1 focus=on state=floating follow=on border=off
+bspc rule -a google-chrome-stable desktop=^1 focus=on state=tiled follow=on
+
+# 2 term desktop
+bspc rule -a urxvt desktop=^2 focus=on state=floating follow=on
+
+# 3 code desktop
+bspc rule -a atom desktop=^3 focus=on state=tiled follow=on
+
+# 4 read desktop
+bspc rule -a evince desktop=^4 focus=on state=tiled follow=on
+
+# 5 files desktop
+bspc rule -a pcmanfm desktop=^5 focus=on state=tiled follow=on
+
+# 6 watch desktop
+bspc rule -a vlc desktop=^6 focus=on state=tiled follow=on
+bspc rule -a qlc desktop=^6 focus=on state=tiled follow=on
+
+
+$HOME/.config/polybar/launch.sh &
+synergy &
+rescuetime
