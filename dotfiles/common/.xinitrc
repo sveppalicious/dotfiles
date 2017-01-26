@@ -57,5 +57,6 @@ xsetroot -cursor_name left_ptr &
 compton --config ~/.config/compton.conf &
 mpd ~/.mpd/mpd.conf &
 nitrogen --restore &
+dunst &
 setxkbmap -model pc105 -layout us,is -option grp:alt_shift_toggle &
 exec bspwm
