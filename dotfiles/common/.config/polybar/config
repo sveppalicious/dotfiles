@@ -29,6 +29,7 @@ height = 28
 ;offset-y = 0
 radius = 6.0
 ;fixed-center = false
+dim-value = 1.0
 
 ;background = ${xrdb:color9}
 background = ${colors.background}
@@ -48,10 +49,10 @@ module-margin-left = 1
 module-margin-right = 2
 
 
-font-0 = Terminess Powerline:pixelsize=12;0
-font-1 = unifont:size=6:heavy:fontformat=truetype;-2
-font-2 = WunconSiji:pixelsize=10;0
-font-3 = FontAwesome:size=12;0
+font-0 = "PragmataPro Mono:pixelsize=10;0"
+font-1 = "unifont:size=6:heavy:fontformat=truetype;-2"
+font-2 = "WunconSiji:pixelsize=10;0"
+font-3 = "FontAwesome:size=12;2"
 
 modules-left = mpd
 modules-center = bspwm
@@ -71,8 +72,9 @@ width = 100%
 height = 28
 ;offset-x = 0
 ;offset-y = 0
-radius = 6.0
+;radius = 6.0
 ;fixed-center = false
+dim-value = 1.0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -89,10 +91,10 @@ module-margin-left = 1
 module-margin-right = 2
 
 
-font-0 = Terminess Powerline:pixelsize=12;0
-font-1 = unifont:size=6:heavy:fontformat=truetype;-2
-font-2 = WunconSiji:pixelsize=10;0
-font-3 = FontAwesome:size=12;0
+font-0 = "PragmataPro Mono:pixelsize=10;0"
+font-1 = "unifont:size=6:heavy:fontformat=truetype;-2"
+font-2 = "WunconSiji:pixelsize=10;0"
+font-3 = "FontAwesome:size=12;2"
 
 modules-left = systext
 modules-center = bspwm
@@ -138,13 +140,13 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 format = <label-state> <label-mode>
 
-ws-icon-0 = surf;
+ws-icon-0 = surf;
 ws-icon-1 = term;
 ws-icon-2 = code;
 ws-icon-3 = read;
-ws-icon-4 = files;
+ws-icon-4 = files;
 ws-icon-5 = watch;
-ws-icon-default = 
+ws-icon-default = 
 
 pin-workspaces = true
 
@@ -291,7 +293,7 @@ label-disconnected = %ifname% disconnected
 type = internal/date
 interval = 5
 
-date = %%{F#666}%{F#222} %Y-%m-%d  %%{F#ec4834}%%{F#222} %H:%M
+date = %%{F#666}%{F#222} %Y-%m-%d  %%{F#ec4834}%%{F#222} %H:%M
 
 
 [module/volume]

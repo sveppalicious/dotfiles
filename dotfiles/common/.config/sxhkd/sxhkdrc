@@ -172,3 +172,9 @@ XF86AudioNext
 # Prev
 XF86AudioPrev
     playerctl previous
+
+#
+# Print screen
+#
+Print
+    ~/.scripts/screenshot

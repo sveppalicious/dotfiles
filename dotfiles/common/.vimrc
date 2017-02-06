@@ -44,6 +44,10 @@ let g:indent_guides_guide_size = 1
 set tabstop=4 shiftwidth=4 expandtab
 set laststatus=2
 colorscheme desert
+" Ctrl + n to open NERD Tree
+map <C-n> :NERDTreeToggle<CR>
+
+
 set mouse=a "scroll with mouse
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
