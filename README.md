@@ -1,5 +1,5 @@
 # dotfiles
-![screenshot](https://github.com/sveppalicious/dotfiles/blob/master/30Jan2k17-182408.png)
+![screenshot](screeny.png)
 Arch Linux dotfiles
 
 - Window Manager: [bspwm](https://github.com/baskerville/bspwm)
