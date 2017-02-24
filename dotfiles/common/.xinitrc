@@ -58,5 +58,6 @@ compton --config ~/.config/compton.conf &
 mpd ~/.mpd/mpd.conf &
 nitrogen --restore &
 dunst &
+# sxhkd &
 setxkbmap -model pc105 -layout us,is -option grp:alt_shift_toggle &
 exec bspwm

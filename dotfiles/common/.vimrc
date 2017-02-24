@@ -24,6 +24,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'junegunn/goyo.vim'
@@ -33,17 +35,25 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'chrisbra/csv.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'noahfrederick/vim-noctu'
+Plugin 'gorodinskiy/vim-coloresque'
 call vundle#end()            " required
 filetype plugin indent on    " required
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='term'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline_theme='term'
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 set tabstop=4 shiftwidth=4 expandtab
-set laststatus=2
-colorscheme desert
+"set laststatus=2
+
+set ruler
+set cursorline
+set window=90
+
+colors noctu
+syntax on
 " Ctrl + n to open NERD Tree
 map <C-n> :NERDTreeToggle<CR>
 
@@ -68,3 +78,4 @@ nmap <leader>h :bprevious<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files

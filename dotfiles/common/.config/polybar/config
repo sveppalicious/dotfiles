@@ -49,7 +49,7 @@ module-margin-left = 1
 module-margin-right = 2
 
 
-font-0 = "PragmataPro Mono:pixelsize=10;0"
+font-0 = "Gohu GohuFont:pixelsize=10;0"
 font-1 = "unifont:size=6:heavy:fontformat=truetype;-2"
 font-2 = "WunconSiji:pixelsize=10;0"
 font-3 = "FontAwesome:size=12;2"
@@ -91,7 +91,7 @@ module-margin-left = 1
 module-margin-right = 2
 
 
-font-0 = "PragmataPro Mono:pixelsize=10;0"
+font-0 = "Gohu GohuFont:pixelsize=10;0"
 font-1 = "unifont:size=6:heavy:fontformat=truetype;-2"
 font-2 = "WunconSiji:pixelsize=10;0"
 font-3 = "FontAwesome:size=12;2"
@@ -152,7 +152,7 @@ pin-workspaces = true
 
 label-focused = %icon%
 label-focused-background = #ccfafafa
-label-focused-foreground = #0040ff
+label-focused-foreground = #D95258
 ;label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 

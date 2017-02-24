@@ -7,8 +7,10 @@ export M=$HOME/.vimrc
 export BROWSER=/usr/bin/google-chrome-stable
 export PATH="${PATH}:home/sveppur/.scripts"
 export PATH="${PATH}:home/sveppur/algs4/bin"
-export BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+export PATH="${PATH}:home/sveppur/wzb-utils"
+export RHISK_COMM="zenbu"
+#export BASE16_SHELL=$HOME/.config/base16-shell/
+#[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -90,6 +92,16 @@ plugins=(git)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias c="clear"
 alias info="~/.scripts/./info.sh"
-ZSH_THEME="bullet-train"
-BULLETTRAIN_PROMPT_CHAR="λ"
+
+#PACMAN
+alias install='sudo pacman -S'
+alias remove='sudo pacman -Rs'
+alias update='sudo pacman -Syu'
+alias search='sudo pacman -Ss'
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias pkgcnt='pacman -Q | wc -l'
+
+#ZSH_THEME="bullet-train"
+#BULLETTRAIN_PROMPT_CHAR="λ"
 source $ZSH/oh-my-zsh.sh
+PROMPT="%F{2}≠ %F{7}%n%F{1}╾╼%F{6}[%F{7}%1~%F{6}]%F{2};%f"
